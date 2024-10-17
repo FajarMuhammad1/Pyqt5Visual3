@@ -1,0 +1,20 @@
+from PyQt5.QtWidgets import QMainWindow ,QWidget ,QApplication ,QPushButton ,QLabel ,QVBoxLayout
+
+class MyWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        layout = QVBoxLayout()
+        btn1 = QPushButton("button1")
+        btn2 = QPushButton("button2")
+        btn3 = QPushButton("button3")
+        btn4 = QPushButton("button4")
+        layout.addWidget(btn1)
+        layout.addWidget(btn2)
+        layout.addWidget(btn3)
+        layout.addWidget(btn4)
+        self.setLayout(layout)
+
+app = QApplication([])
+window = MyWindow()
+window.show()
+app.exec_()
